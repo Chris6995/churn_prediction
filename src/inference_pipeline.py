@@ -7,10 +7,14 @@ import joblib
 import numpy as np
 import pandas as pd
 from src.feature_pipeline import clean_data
+from xgboost import XGBClassifier
 
 # Cargar los artefactos una vez
 pipeline = joblib.load("models/feature_pipeline.pkl")
-model = joblib.load("models/xgb_model.pkl")
+model = XGBClassifier()
+model.load_model("models/xgb_model.json")
+
+
 try:
     threshold = joblib.load("models/best_threshold.pkl")
 except:

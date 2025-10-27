@@ -37,7 +37,4 @@ joblib.dump(pipeline, "models/feature_pipeline.pkl")
 # 4. Entrenar modelo
 model = train_model(X_processed, y)
 
-# 5. Guardar modelo entrenado
-joblib.dump(model, "models/xgb_model.pkl")
-
 print("✅ Reentrenamiento completo.")

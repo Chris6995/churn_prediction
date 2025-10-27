@@ -30,7 +30,7 @@ def train_model(X_train, y_train, n_iter=20, cv=5):
         'min_child_weight': [1, 3, 5]
     }
 
-    model = XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss')
+    model = XGBClassifier(random_state=42, eval_metric='logloss')
 
     search = RandomizedSearchCV(
         estimator=model,
@@ -47,8 +47,11 @@ def train_model(X_train, y_train, n_iter=20, cv=5):
 
     best_model = search.best_estimator_
 
+    # Recomendado: guardar también en JSON para portabilidad
+    best_model.save_model("models/xgb_model.json")
+
     # Guardar el mejor modelo
-    joblib.dump(best_model, "models/churn_model.pkl")
+    joblib.dump(best_model, "models/xgb_model.pkl")
 
     print("Mejores hiperparámetros:", search.best_params_)
     print("Mejor F1 en CV:", search.best_score_)
