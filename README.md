@@ -39,7 +39,7 @@ pip install -r requirements.txt
 3. La aplicación Streamlit se encuentra en `src/`.
 
 ## Autor
-[Tu nombre]
+Christian Donaire - Nodd3r
 
 ## Licencia
-[Tipo de licencia]
+MIT
