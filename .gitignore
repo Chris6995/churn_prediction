@@ -32,16 +32,16 @@ ENV/
 .vscode/
 *.code-workspace
 
-# Models
-models/*.pkl
-models/*.joblib
-models/*.h5
+# # Models
+# models/*.pkl
+# models/*.joblib
+# models/*.h5
 
-# Data
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+# # Data
+# data/raw/*
+# data/processed/*
+# !data/raw/.gitkeep
+# !data/processed/.gitkeep
 
 # Logs
 *.log
