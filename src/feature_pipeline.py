@@ -38,6 +38,6 @@ def build_feature_pipeline(num_cols, cat_cols):
     ("num", num_pipeline, num_cols),
     ("cat", cat_pipeline, cat_cols)
     ])
-    
+
 
     return full_pipeline
